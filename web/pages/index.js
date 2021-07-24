@@ -7,22 +7,7 @@ import { GradientPinkBlue } from '@visx/gradient';
 import { AreaClosed } from '@visx/shape';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import Button from '@material-ui/core/Button';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    '& > *': {
-      margin: theme.spacing(1),
-      width: theme.spacing(16),
-      height: theme.spacing(16),
-    },
-  },
-}));
 export default function Home() {
-  const classes = useStyles();
-
   return (
     <div className={styles.container}>
       <Head>
@@ -31,23 +16,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        {/* <ParentSize>
-          {({ width, height }) => <PieChart width={width} height={height} />}
-        </ParentSize> */}
+        <ParentSize>
+          {({ width, height }) => 
+          <div>
+          {/* <GradientPinkBlue id="gradient" /> */}
+          <PieChart width={width} height={height} />
+          </div>
+          }
+        </ParentSize>
         {/* <PieChart/> */}
         <svg>
-          <GradientPinkBlue id="gradient" />
           {/* <AreaClosed fill="url('#gradient')" /> */}
-          <div className={classes.root}>
-            <Paper
-              variant="outlined"
-              height={100}
-              width={100}
-            // fill="url('#gradient')"
-            >
-              <Button variant="contained">Default</Button>
-            </Paper>
-          </div>
+          {/* <rect width={100} height={100} fill="url('#gradient')"></rect> */}
         </svg>
       </div>
     </div>
