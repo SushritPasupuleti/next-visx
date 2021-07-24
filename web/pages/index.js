@@ -14,6 +14,13 @@ import { Group } from "@visx/group";
 import { Text } from "@visx/text";
 
 export default function Home() {
+  const data = [
+    { symbol: "ADA", amount: 200, color: "#0033ad", inUSD: 1.48 },
+    { symbol: "SOL", amount: 5, color: "#00ffbd", inUSD: 37.6 },
+    { symbol: "BTC", amount: 0.005, color: "#F7931A", inUSD: 37363 },
+  ];
+
+  
   return (
     <div className={styles.container}>
       <Head>
