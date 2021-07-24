@@ -29,6 +29,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       Hello There
+      <main>
+        <svg width={100} height={100}>
+          <Group top={50} left={50}>
+            <Pie data={data}>
+
+            </Pie>
+          </Group>
+        </svg>
+      </main>
     </div>
   )
 }
