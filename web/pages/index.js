@@ -22,6 +22,7 @@ export default function Home() {
         <svg>
           <GradientPinkBlue id="gradient" />
           {/* <AreaClosed fill="url('#gradient')" /> */}
+          <rect width={100} height={100} fill="url('#gradient')"></rect>
         </svg>
       </div>
     </div>
