@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import ParentSize from "@visx/responsive/lib/components/ParentSize";
+import PieChart from '../components/Pie';
 
 export default function Home() {
   return (
@@ -11,7 +13,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        Hello There
+        <ParentSize>
+          {({ width, height }) => <PieChart width={width} height={height} />}
+        </ParentSize>
+        {/* <PieChart/> */}
       </div>
     </div>
   )
