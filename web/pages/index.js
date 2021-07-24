@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import ParentSize from "@visx/responsive/lib/components/ParentSize";
 import PieChart from '../components/Pie';
-
+import { GradientPinkBlue } from '@visx/gradient';
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -13,10 +13,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <ParentSize>
+        {/* <ParentSize>
           {({ width, height }) => <PieChart width={width} height={height} />}
-        </ParentSize>
+        </ParentSize> */}
         {/* <PieChart/> */}
+        <svg>
+          <GradientPinkBlue id="gradient" />
+          <AreaClosed fill="url('#gradient')" />
+        </svg>
       </div>
     </div>
   )
