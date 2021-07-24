@@ -21,7 +21,7 @@ export default function Home() {
         {/* <PieChart/> */}
         <svg>
           <GradientPinkBlue id="gradient" />
-          <AreaClosed fill="url('#gradient')" />
+          {/* <AreaClosed fill="url('#gradient')" /> */}
         </svg>
       </div>
     </div>
