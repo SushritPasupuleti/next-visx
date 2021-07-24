@@ -5,8 +5,23 @@ import ParentSize from "@visx/responsive/lib/components/ParentSize";
 import PieChart from '../components/Pie';
 import { GradientPinkBlue } from '@visx/gradient';
 import { AreaClosed } from '@visx/shape';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    '& > *': {
+      margin: theme.spacing(1),
+      width: theme.spacing(16),
+      height: theme.spacing(16),
+    },
+  },
+}));
 export default function Home() {
+  const classes = useStyles();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -22,7 +37,9 @@ export default function Home() {
         <svg>
           <GradientPinkBlue id="gradient" />
           {/* <AreaClosed fill="url('#gradient')" /> */}
-          <rect width={100} height={100} fill="url('#gradient')"></rect>
+          <div className={classes.root}>
+            <Paper fill="url('#gradient')"></Paper>
+          </div>
         </svg>
       </div>
     </div>
