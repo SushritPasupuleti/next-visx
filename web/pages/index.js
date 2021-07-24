@@ -32,7 +32,7 @@ export default function Home() {
       <main>
         <svg width={100} height={100}>
           <Group top={50} left={50}>
-            <Pie data={data}>
+            <Pie data={data} pieValue={(x) => x.amount * x.inUSD}>
 
             </Pie>
           </Group>
