@@ -4,6 +4,8 @@ import styles from '../styles/Home.module.css'
 import ParentSize from "@visx/responsive/lib/components/ParentSize";
 import PieChart from '../components/Pie';
 import { GradientPinkBlue } from '@visx/gradient';
+import { AreaClosed } from '@visx/shape';
+
 export default function Home() {
   return (
     <div className={styles.container}>
