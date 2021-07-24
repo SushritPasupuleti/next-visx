@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.2",
     "@visx/gradient": "^1.7.0",
     "@visx/group": "^1.17.1",
     "@visx/mock-data": "^1.7.0",
