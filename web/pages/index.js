@@ -7,6 +7,7 @@ import { GradientPinkBlue } from '@visx/gradient';
 import { AreaClosed } from '@visx/shape';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,7 +39,14 @@ export default function Home() {
           <GradientPinkBlue id="gradient" />
           {/* <AreaClosed fill="url('#gradient')" /> */}
           <div className={classes.root}>
-            <Paper fill="url('#gradient')"></Paper>
+            <Paper
+              variant="outlined"
+              height={100}
+              width={100}
+            // fill="url('#gradient')"
+            >
+              <Button variant="contained">Default</Button>
+            </Paper>
           </div>
         </svg>
       </div>
