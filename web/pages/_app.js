@@ -3,7 +3,7 @@ import Head from 'next/head';
 import '../styles/globals.css'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
-
+import theme from '../theme'
 function MyApp({ Component, pageProps }) {
 
   React.useEffect(() => {
@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={theme}>
       <Head>
         <meta
           name="viewport"
